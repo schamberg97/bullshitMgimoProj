@@ -1,7 +1,6 @@
+from my_shop import MyShop
+from myBot import MYBOT
 class software:
-	@staticmethod
-	def run():
-		pass
 	@staticmethod
 	def runShowTables():
 		#подключаем библиотеку
@@ -32,8 +31,25 @@ class software:
 		my_menu=Menu(menu_title, menu_items)
 		choice=my_menu.get_user_choice()
 		listTable(menu_actions[choice-1])
+			
+	@staticmethod
+	def run():
+		#Создаем магазин товаров
+		myShop=MyShop("myShop.xml")
+		#myShop.printProduct()
 		
+		#Добавляем тестовые данные
+		myShop.addSampleData(200,2,2)
+		#myShop.printProduct()
+		myShop.saveXML("new.xml")
 		
+		#Создаем бота
+		bot=MYBOT(myShop)
+		#обучаем бота
+		bot.botTraining(1)
 		
-		# TODO: Задание 1. добавить чтение остальных таблиц - СДЕЛАНО (кроме базы клиентов и заказов)
-		# TODO: Задание 2. добавить меню для вывода таблицы по запросу пользователя
+		#получаем данные от пользователя
+		print('Для выхода - нажмите Ctrl-C')
+		sd=bot.getUserChoice()
+		#строим рекомендацию и выводим рекомендованный товар
+		print("Ваш рекомендованный товар: ",bot.getPrecigion(sd))
