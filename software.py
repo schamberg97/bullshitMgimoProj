@@ -1,5 +1,7 @@
 from my_shop import MyShop
 from myBot import MYBOT
+from sMenu import Menu
+
 class software:
 	@staticmethod
 	def runShowTables():
