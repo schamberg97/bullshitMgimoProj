@@ -1,167 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <myShop>
 	<!-- Таблица category -->
-	<category>
-		<item>
+	<categories>
+		<category>
 			<id>1</id>
 			<name>Ассортимент</name>
 			<parent>0</parent>
-		</item>
-		<item>
+		</category>
+		<category>
 			<id>2</id>
 			<name>Одежда</name>
 			<parent>1</parent>
-		</item>
-		<item>
+		</category>
+		<category>
 			<id>3</id>
 			<name>Обувь</name>
 			<parent>1</parent>
-		</item>
-		<item>
+		</category>
+		<category>
 			<id>4</id>
 			<name>Аксессуары</name>
 			<parent>1</parent>
-		</item>
-	</category>
+		</category>
+	</categories>
 	<!-- Таблица city -->
-	<city>
-		<item>
+	<cities>
+		<city>
 			<id>1</id>
 			<name>Москва</name>
-		</item>
-		<item>
+		</city>
+		<city>
 			<id>2</id>
 			<name>Подольск</name>
-		</item>
-	</city>
+		</city>
+	</cities>
 	<!-- Таблица color -->
-	<color>
-		<item>
+	<colors>
+		<color>
 			<id>1</id>
 			<name>Белый</name>
-		</item>
-		<item>
+		</color>
+		<color>
 			<id>2</id>
 			<name>Черный</name>
-		</item>
-		<item>
+		</color>
+		<color>
 			<id>3</id>
 			<name>Синий</name>
-		</item>
-	</color>
+		</color>
+	</colors>
 	<!-- Таблица customer -->
-	<customer>
-		<item>
+	<customers>
+		<customer>
 			<id>1</id>
 			<firstname>Иван</firstname>
 			<lastname>Иванов</lastname>
 			<age>23</age>
 			<sex>M</sex>
 			<address>1</address>
-		</item>
-		<item>
+		</customer>
+		<customer>
 			<id>2</id>
 			<firstname>Марианна</firstname>
 			<lastname>Вертинская</lastname>
 			<age>35</age>
 			<sex>F</sex>
 			<address>2</address>
-		</item>
-	</customer>
+		</customer>
+	</customers>
 	<!-- Таблица material -->
-	<material>
-		<item>
+	<materials>
+		<material>
 			<id>1</id>
 			<name>Шерсть</name>
-		</item>
-		<item>
+		</material>
+		<material>
 			<id>2</id>
 			<name>Кожа</name>
-		</item>
-		<item>
+		</material>
+		<material>
 			<id>3</id>
 			<name>Синтетика</name>
-		</item>
-		<item>
+		</material>
+		<material>
 			<id>4</id>
 			<name>Шелк</name>
-		</item>
-	</material>
+		</material>
+	</materials>
 	<!-- Таблица order -->
-	<order>
-		<item>
+	<orders>
+		<order>
 			<id>1</id>
-			<product_id>4</product_id>
-			<customer_id>1</customer_id>
+			<product>4</product>
+			<customer>1</customer>
 			<date>2019-03-01</date>
-		</item>
-		<item>
+		</order>
+		<order>
 			<id>2</id>
-			<product_id>1</product_id>
-			<customer_id>2</customer_id>
+			<product>1</product>
+			<customer>2</customer>
 			<date>2019-03-02</date>
-		</item>
-	</order>
-	<!-- Таблица product  -->
-	<product>
-		<item>
+		</order>
+	</orders>
+	<!-- Таблица product -->
+	<products>
+		<product>
 			<id>1</id>
 			<name>Платье с декоративными элементами</name>
-			<category_id>2</category_id>
+			<category>2</category>
 			<price>100</price>
-			<color_id>1</color_id>
+			<color>1</color>
 			<size>M</size>
-			<season_id>2</season_id>
-			<material_id>4</material_id>
-		</item>
-		<item>
+			<season>2</season>
+			<material>4</material>
+		</product>
+		<product>
 			<id>2</id>
 			<name>Сапоги на платформе</name>
-			<category_id>3</category_id>
+			<category>3</category>
 			<price>200</price>
-			<color_id>2</color_id>
-			<size>L</size>
-			<season_id>3</season_id>
-			<material_id>2</material_id>
-		</item>
-		<item>
+			<color>2</color>
+			<size>36</size>
+			<season>3</season>
+			<material>2</material>
+		</product>
+		<product>
 			<id>3</id>
 			<name>Перчатки длинные</name>
-			<category_id>4</category_id>
+			<category>4</category>
 			<price>150</price>
-			<color_id>3</color_id>
+			<color>3</color>
 			<size>А</size>
-			<season_id>3</season_id>
-			<material_id>2</material_id>
-		</item>
-		<item>
+			<season>3</season>
+			<material>2</material>
+		</product>
+		<product>
 			<id>4</id>
 			<name>Пальто</name>
-			<category_id>2</category_id>
+			<category>2</category>
 			<price>500</price>
-			<color_id>3</color_id>
+			<color>3</color>
 			<size>L</size>
-			<season_id>4</season_id>
-			<material_id>1</material_id>
-		</item>
-	</product>
+			<season>4</season>
+			<material>1</material>
+		</product>
+	</products>
 	<!-- Таблица season -->
-	<season>
-		<item>
+	<seasons>
+		<season>
 			<id>1</id>
 			<name>Зима</name>
-		</item>
-		<item>
+		</season>
+		<season>
 			<id>2</id>
 			<name>Лето</name>
-		</item>
-		<item>
+		</season>
+		<season>
 			<id>3</id>
 			<name>Осень</name>
-		</item>
-		<item>
+		</season>
+		<season>
 			<id>4</id>
 			<name>Весна</name>
-		</item>
-	</season>
+		</season>
+	</seasons>
 </myShop>

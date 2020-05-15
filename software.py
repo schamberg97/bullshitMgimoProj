@@ -1,4 +1,4 @@
-from my_shop import MyShop
+from myShop import MyShop
 from myBot import MYBOT
 from sMenu import Menu
 
@@ -41,14 +41,14 @@ class software:
 		#myShop.printProduct()
 		
 		#Добавляем тестовые данные
-		myShop.addSampleData(200,2,2)
+		myShop.addSampleData(30, 30, 500)
 		#myShop.printProduct()
 		myShop.saveXML("new.xml")
 		
 		#Создаем бота
 		bot=MYBOT(myShop)
 		#обучаем бота
-		bot.botTraining(1)
+		bot.botTraining(0)
 		
 		#получаем данные от пользователя
 		print('Для выхода - нажмите Ctrl-C')
