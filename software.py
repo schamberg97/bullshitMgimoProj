@@ -14,25 +14,26 @@ class software:
 		dom.normalize()
 		
 		#Читаем таблицу
-		def listTable(what):
-		        pars=dom.getElementsByTagName(what)[0]
-		        #Читаем элементы таблицы Materials
-		        nodes=pars.getElementsByTagName("item")
+		def listTable(what,whatSub):
+				pars=dom.getElementsByTagName(what)[0]
+				#Читаем элементы таблицы Materials
+				nodes=pars.getElementsByTagName(whatSub)
 		
 		        #Выводим элементы таблицы на экран
-		        for node in nodes:
-		                id = node.getElementsByTagName("id")[0]
-		                name = node.getElementsByTagName("name")[0]
-		                print(id.firstChild.data, name.firstChild.data)
+				for node in nodes:
+					id = node.getElementsByTagName("id")[0]
+					name = node.getElementsByTagName("name")[0]
+					print(id.firstChild.data, name.firstChild.data)
 		
 		menu_items=["Категории", "Цвета", "Адреса", "Материал", "Сезон", "Товар"]
-		menu_actions=['category','color', 'city', 'material', 'season', 'product'] # Базу клиентов и заказов не предлагаем ;)
+		menu_actions=['categories','colors', 'cities', 'materials', 'seasons', 'products'] # Базу клиентов и заказов не предлагаем ;)
+		menu_actions_nodes=['category','color', 'city', 'material', 'season', 'product']
 		menu_title="Смотреть таблицу"
 		
 		
 		my_menu=Menu(menu_title, menu_items)
 		choice=my_menu.get_user_choice()
-		listTable(menu_actions[choice-1])
+		listTable(menu_actions[choice-1], menu_actions_nodes[choice-1])
 			
 	@staticmethod
 	def run():
